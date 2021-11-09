@@ -8,7 +8,7 @@ export default function AppStats() {
 
 	const getStats = () => {
 	
-        fetch(`http://<Cloud DNS>:8100/stats`)
+        fetch(`http://acit3855.westus2.cloudapp.azure.com:8100/stats`)
             .then(res => res.json())
             .then((result)=>{
 				console.log("Received Stats")
@@ -35,21 +35,21 @@ export default function AppStats() {
                 <table className={"StatsTable"}>
 					<tbody>
 						<tr>
-							<th>Blood Pressure</th>
-							<th>Heart Rate</th>
+							<th>Frontend Order</th>
+							<th>Printer Order</th>
 						</tr>
 						<tr>
-							<td># BP: {stats['num_bp_readings']}</td>
-							<td># HR: {stats['num_hr_readings']}</td>
+							<td># FE: {stats['num_fe_readings']}</td>
+							<td># PO: {stats['num_po_readings']}</td>
 						</tr>
 						<tr>
-							<td colspan="2">Max BP Systolic: {stats['max_bp_sys_reading']}</td>
+							<td colspan="2">Max FE Severity: {stats['max_fe_reading']}</td>
 						</tr>
 						<tr>
-							<td colspan="2">Max BR Diastolic: {stats['max_bp_dia_reading']}</td>
+							<td colspan="2">Max PO Severity: {stats['max_po_reading']}</td>
 						</tr>
 						<tr>
-							<td colspan="2">Max HR: {stats['max_bp_sys_reading']}</td>
+							<td colspan="2">Total Orders: {stats['max_po_reading']}</td>
 						</tr>
 					</tbody>
                 </table>

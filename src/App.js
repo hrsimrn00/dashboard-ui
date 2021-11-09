@@ -1,4 +1,4 @@
-import logo from './service.png';
+import logo from './logo.png';
 import './App.css';
 
 import EndpointAudit from './components/EndpointAudit'

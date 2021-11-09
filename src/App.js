@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './service.png';
 import './App.css';
 
 import EndpointAudit from './components/EndpointAudit'
@@ -6,7 +6,7 @@ import AppStats from './components/AppStats'
 
 function App() {
 
-    const endpoints = ["blood_pressure", "heart_rate"]
+    const endpoints = ["frontend_order", "printer_order"]
 
     const rendered_endpoints = endpoints.map((endpoint) => {
         return <EndpointAudit key={endpoint} endpoint={endpoint}/>
